@@ -11,8 +11,6 @@ const RenderCards= ({ data, title }) => {
     }
 }
 
-
-
 const Home = () => {
 
     const [loading, setLoading] = useState(false)
@@ -22,7 +20,7 @@ const Home = () => {
     const [searchTimeout, setSearchTimeout] = useState(null);
 
     const fetchPosts = async () => {
-      setLoading(true);
+      setLoading(false);
   
       try {
         const response = await fetch('http://localhost:8080/api/v1/post', {
@@ -58,9 +56,6 @@ const Home = () => {
         }, 500),
       );
     };
-  
-
-
   return (
     <section className='max-w-7xl mx-auto'>
         <div>
